@@ -1,16 +1,12 @@
+# coding: utf-8
+import pandas as pd
 import csv
-import sys
 import os
-import logging
-import datetime
+import datetime 
 from elasticsearch import Elasticsearch
 from elasticsearch import helpers
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
-logging.basicConfig()
 es = Elasticsearch()
-
+es.indices.delete(index="platform",ignore=[400,404])
 es.indices.create(
     index="platform",
     body={
@@ -20,44 +16,55 @@ es.indices.create(
         'analysis': {
           "analyzer":{"default":{"type": "smartcn"}}
           }
-        }
+        },
+      'mappings':{
+         'facebook':{
+            'properties':{
+                u'留言數':{'type': 'integer'}
+                }
+            }   
+        }  
       },
     ignore=400
 )
-
 def importCSV(indexName,typeName,fileName):
     if not os.path.exists(fileName):
-        print "file not found"
+        print ("file not found")
         return
     actions=[]
     if not es.indices.exists(index=indexName,allow_no_indices=True):
-        #print "not found index"
         es.indices.create(index=indexName,body={},ignore=400)
-    for item in csv.DictReader(open(fileName, 'rb')):
-        actions.append({"_index":indexName,"_type":typeName,"_source":encoding(item)})
+    for item in csv.DictReader(open(fileName, 'r')):  
+        actions.append({"_index":indexName,"_type":typeName,"_source":item})
     res = helpers.bulk(es,actions,chunk_size=100)
     es.indices.flush(index=[indexName])
     return len(actions)
-
-    def encoding(item):
-        for i in item:
-            item[i]=str(item[i]).encode('utf-8')
-        return item
-
-        if __name__=="__main__":
-            starttime = datetime.datetime.now()
-            result=importCSV("platform","facebook","demo_test.csv")#index,type,file.csv
-            print "import size = "+str(result)
-            endtime = datetime.datetime.now()
-            print "import cost = "+str(endtime - starttime)
-
-            from elasticsearch import Elasticsearch
-            es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
-
-need_save = es.search(index='platform',doc_type='facebook', body={"query":{"match":{"_all":u"蔡英文"}},"sort":{u"留言數":{"order":"asc"}}})
-
+result=importCSV("platform","facebook","demo_test.csv")
+from elasticsearch import Elasticsearch
+from elasticsearch.client import IndicesClient
+es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+es_index=IndicesClient(es)
+es_index.get_mapping(index="platform",doc_type="facebook")
+need_save = es.search(index='platform',doc_type='facebook', body={"query":{"match_phrase":{"_all":u"蔡英文"}},"sort":{u"留言數":{"order":"desc"}}})
+es.count(index='platform',doc_type='facebook', body={"query":{"match_phrase":{"_all":u"蔡英文"}},"sort":{u"留言數":{"order":"desc"}}})
+len(need_save['hits']['hits'])
 import json
-need_save = json.dumps(need_save,ensure_ascii=False).encode('utf8')
-g = open('save_the_file.json','wb+')
-json.dump(need_save,g)
+need_save = json.dumps(need_save['hits']['hits'],ensure_ascii=False).encode('utf8')
+g = open('save_the_file.csv','wb+')
+g.write(need_save)
 g.close()
+pd.read_csv('save_the_file.csv')
+#打開看存檔
+g = open('save_the_file.csv','r+')
+y = json.load(g)
+g.close()
+print (y)
+g = open('save_the_file.json','wb+')
+g.write(need_save)
+g.close()
+pd.read_json('save_the_file.json')
+#打開看存檔
+g = open('save_the_file.json','r+')
+y = json.load(g)
+g.close()
+print (y)
