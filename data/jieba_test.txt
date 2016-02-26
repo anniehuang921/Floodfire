@@ -1,0 +1,874 @@
+127.0.0.1:9200/test/_analyze?analyzer=jieba&text=親民黨總統 副總統參選人 宋楚瑜 徐欣瑩2016元旦參加台北市升旗典禮2016.01.01
+{
+  "tokens": [
+    {
+      "token": "親民黨",
+      "start_offset": 0,
+      "end_offset": 3,
+      "type": "word",
+      "position": 1
+    },
+    {
+      "token": "總統",
+      "start_offset": 3,
+      "end_offset": 5,
+      "type": "word",
+      "position": 2
+    },
+    {
+      "token": " ",
+      "start_offset": 5,
+      "end_offset": 6,
+      "type": "word",
+      "position": 3
+    },
+    {
+      "token": "副",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "word",
+      "position": 4
+    },
+    {
+      "token": "總統",
+      "start_offset": 7,
+      "end_offset": 9,
+      "type": "word",
+      "position": 5
+    },
+    {
+      "token": "參選人",
+      "start_offset": 9,
+      "end_offset": 12,
+      "type": "word",
+      "position": 6
+    },
+    {
+      "token": " ",
+      "start_offset": 12,
+      "end_offset": 13,
+      "type": "word",
+      "position": 7
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 13,
+      "end_offset": 16,
+      "type": "word",
+      "position": 8
+    },
+    {
+      "token": " ",
+      "start_offset": 16,
+      "end_offset": 17,
+      "type": "word",
+      "position": 9
+    },
+    {
+      "token": "徐欣瑩",
+      "start_offset": 17,
+      "end_offset": 20,
+      "type": "word",
+      "position": 10
+    },
+    {
+      "token": "2016",
+      "start_offset": 20,
+      "end_offset": 24,
+      "type": "word",
+      "position": 11
+    },
+    {
+      "token": "元旦",
+      "start_offset": 24,
+      "end_offset": 26,
+      "type": "word",
+      "position": 12
+    },
+    {
+      "token": "參加",
+      "start_offset": 26,
+      "end_offset": 28,
+      "type": "word",
+      "position": 13
+    },
+    {
+      "token": "台北",
+      "start_offset": 28,
+      "end_offset": 30,
+      "type": "word",
+      "position": 14
+    },
+    {
+      "token": "北市",
+      "start_offset": 29,
+      "end_offset": 31,
+      "type": "word",
+      "position": 15
+    },
+    {
+      "token": "台北市",
+      "start_offset": 28,
+      "end_offset": 31,
+      "type": "word",
+      "position": 16
+    },
+    {
+      "token": "升旗",
+      "start_offset": 31,
+      "end_offset": 33,
+      "type": "word",
+      "position": 17
+    },
+    {
+      "token": "典禮",
+      "start_offset": 33,
+      "end_offset": 35,
+      "type": "word",
+      "position": 18
+    },
+    {
+      "token": "2016.01",
+      "start_offset": 35,
+      "end_offset": 42,
+      "type": "word",
+      "position": 19
+    },
+    {
+      "token": "01",
+      "start_offset": 43,
+      "end_offset": 45,
+      "type": "word",
+      "position": 21
+    }
+  ]
+}
+
+
+
+127.0.0.1:9200/test/_analyze?analyzer=jieba&text=其實太陽花學運不是民進黨的 帶頭衝 而是其他小黨先去衝 民進黨才在後面跟著…不過無論這場學運的好壞 我只能說民進黨過去為民發聲的衝勁真的沒有像過去那麼強烈 這就是偏綠年輕人後來決定投宋的主要原因
+{
+  "tokens": [
+    {
+      "token": "其實",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 1
+    },
+    {
+      "token": "太陽花",
+      "start_offset": 2,
+      "end_offset": 5,
+      "type": "word",
+      "position": 2
+    },
+    {
+      "token": "學運",
+      "start_offset": 5,
+      "end_offset": 7,
+      "type": "word",
+      "position": 3
+    },
+    {
+      "token": "不是",
+      "start_offset": 7,
+      "end_offset": 9,
+      "type": "word",
+      "position": 4
+    },
+    {
+      "token": "民進黨",
+      "start_offset": 9,
+      "end_offset": 12,
+      "type": "word",
+      "position": 5
+    },
+    {
+      "token": " ",
+      "start_offset": 13,
+      "end_offset": 14,
+      "type": "word",
+      "position": 7
+    },
+    {
+      "token": "帶頭衝",
+      "start_offset": 14,
+      "end_offset": 17,
+      "type": "word",
+      "position": 8
+    },
+    {
+      "token": " ",
+      "start_offset": 17,
+      "end_offset": 18,
+      "type": "word",
+      "position": 9
+    },
+    {
+      "token": "而是",
+      "start_offset": 18,
+      "end_offset": 20,
+      "type": "word",
+      "position": 10
+    },
+    {
+      "token": "其他",
+      "start_offset": 20,
+      "end_offset": 22,
+      "type": "word",
+      "position": 11
+    },
+    {
+      "token": "小黨",
+      "start_offset": 22,
+      "end_offset": 24,
+      "type": "word",
+      "position": 12
+    },
+    {
+      "token": "先",
+      "start_offset": 24,
+      "end_offset": 25,
+      "type": "word",
+      "position": 13
+    },
+    {
+      "token": "去衝",
+      "start_offset": 25,
+      "end_offset": 27,
+      "type": "word",
+      "position": 14
+    },
+    {
+      "token": " ",
+      "start_offset": 27,
+      "end_offset": 28,
+      "type": "word",
+      "position": 15
+    },
+    {
+      "token": "民進黨",
+      "start_offset": 28,
+      "end_offset": 31,
+      "type": "word",
+      "position": 16
+    },
+    {
+      "token": "才",
+      "start_offset": 31,
+      "end_offset": 32,
+      "type": "word",
+      "position": 17
+    },
+    {
+      "token": "在後面",
+      "start_offset": 32,
+      "end_offset": 35,
+      "type": "word",
+      "position": 18
+    },
+    {
+      "token": "跟",
+      "start_offset": 35,
+      "end_offset": 36,
+      "type": "word",
+      "position": 19
+    },
+    {
+      "token": "著",
+      "start_offset": 36,
+      "end_offset": 37,
+      "type": "word",
+      "position": 20
+    },
+    {
+      "token": "…",
+      "start_offset": 37,
+      "end_offset": 38,
+      "type": "word",
+      "position": 21
+    },
+    {
+      "token": "不過",
+      "start_offset": 38,
+      "end_offset": 40,
+      "type": "word",
+      "position": 22
+    },
+    {
+      "token": "無論",
+      "start_offset": 40,
+      "end_offset": 42,
+      "type": "word",
+      "position": 23
+    },
+    {
+      "token": "這場",
+      "start_offset": 42,
+      "end_offset": 44,
+      "type": "word",
+      "position": 24
+    },
+    {
+      "token": "學運",
+      "start_offset": 44,
+      "end_offset": 46,
+      "type": "word",
+      "position": 25
+    },
+    {
+      "token": "好",
+      "start_offset": 47,
+      "end_offset": 48,
+      "type": "word",
+      "position": 27
+    },
+    {
+      "token": "壞",
+      "start_offset": 48,
+      "end_offset": 49,
+      "type": "word",
+      "position": 28
+    },
+    {
+      "token": " ",
+      "start_offset": 49,
+      "end_offset": 50,
+      "type": "word",
+      "position": 29
+    },
+    {
+      "token": "只能",
+      "start_offset": 51,
+      "end_offset": 53,
+      "type": "word",
+      "position": 31
+    },
+    {
+      "token": "說",
+      "start_offset": 53,
+      "end_offset": 54,
+      "type": "word",
+      "position": 32
+    },
+    {
+      "token": "民進黨",
+      "start_offset": 54,
+      "end_offset": 57,
+      "type": "word",
+      "position": 33
+    },
+    {
+      "token": "過去",
+      "start_offset": 57,
+      "end_offset": 59,
+      "type": "word",
+      "position": 34
+    },
+    {
+      "token": "為民",
+      "start_offset": 59,
+      "end_offset": 61,
+      "type": "word",
+      "position": 35
+    },
+    {
+      "token": "發聲",
+      "start_offset": 61,
+      "end_offset": 63,
+      "type": "word",
+      "position": 36
+    },
+    {
+      "token": "衝勁",
+      "start_offset": 64,
+      "end_offset": 66,
+      "type": "word",
+      "position": 38
+    },
+    {
+      "token": "真的",
+      "start_offset": 66,
+      "end_offset": 68,
+      "type": "word",
+      "position": 39
+    },
+    {
+      "token": "沒有",
+      "start_offset": 68,
+      "end_offset": 70,
+      "type": "word",
+      "position": 40
+    },
+    {
+      "token": "像",
+      "start_offset": 70,
+      "end_offset": 71,
+      "type": "word",
+      "position": 41
+    },
+    {
+      "token": "過去",
+      "start_offset": 71,
+      "end_offset": 73,
+      "type": "word",
+      "position": 42
+    },
+    {
+      "token": "那麼",
+      "start_offset": 73,
+      "end_offset": 75,
+      "type": "word",
+      "position": 43
+    },
+    {
+      "token": "強烈",
+      "start_offset": 75,
+      "end_offset": 77,
+      "type": "word",
+      "position": 44
+    },
+    {
+      "token": " ",
+      "start_offset": 77,
+      "end_offset": 78,
+      "type": "word",
+      "position": 45
+    },
+    {
+      "token": "就是",
+      "start_offset": 79,
+      "end_offset": 81,
+      "type": "word",
+      "position": 47
+    },
+    {
+      "token": "偏綠年",
+      "start_offset": 81,
+      "end_offset": 84,
+      "type": "word",
+      "position": 48
+    },
+    {
+      "token": "輕人後來",
+      "start_offset": 84,
+      "end_offset": 88,
+      "type": "word",
+      "position": 49
+    },
+    {
+      "token": "決定",
+      "start_offset": 88,
+      "end_offset": 90,
+      "type": "word",
+      "position": 50
+    },
+    {
+      "token": "投宋",
+      "start_offset": 90,
+      "end_offset": 92,
+      "type": "word",
+      "position": 51
+    },
+    {
+      "token": "主要",
+      "start_offset": 93,
+      "end_offset": 95,
+      "type": "word",
+      "position": 53
+    },
+    {
+      "token": "原因",
+      "start_offset": 95,
+      "end_offset": 97,
+      "type": "word",
+      "position": 54
+    }
+  ]
+}
+
+
+127.0.0.1:9200/test/_analyze?analyzer=jieba&text=民進黨的人看看吧！你們家的小豬又往宋楚瑜家送了！但是，宋楚瑜有交待，不能收堅苦人的錢?所以就退了！如果是你們會退嗎？還是希望堅苦人的錢都回娘家？？？謝謝宋楚瑜，你的清清白白，為選民著想的心，讓每個你的選民感到驕傲?https://www.facebook.com/SanChingchen/posts/1016094781762836
+{
+  "tokens": [
+    {
+      "token": "民進黨",
+      "start_offset": 0,
+      "end_offset": 3,
+      "type": "word",
+      "position": 1
+    },
+    {
+      "token": "的人",
+      "start_offset": 3,
+      "end_offset": 5,
+      "type": "word",
+      "position": 2
+    },
+    {
+      "token": "看看",
+      "start_offset": 5,
+      "end_offset": 7,
+      "type": "word",
+      "position": 3
+    },
+    {
+      "token": "看吧",
+      "start_offset": 6,
+      "end_offset": 8,
+      "type": "word",
+      "position": 4
+    },
+    {
+      "token": "看看吧",
+      "start_offset": 5,
+      "end_offset": 8,
+      "type": "word",
+      "position": 5
+    },
+    {
+      "token": "你們",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 7
+    },
+    {
+      "token": "家",
+      "start_offset": 2,
+      "end_offset": 3,
+      "type": "word",
+      "position": 8
+    },
+    {
+      "token": "小豬",
+      "start_offset": 4,
+      "end_offset": 6,
+      "type": "word",
+      "position": 10
+    },
+    {
+      "token": "往",
+      "start_offset": 7,
+      "end_offset": 8,
+      "type": "word",
+      "position": 12
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 8,
+      "end_offset": 11,
+      "type": "word",
+      "position": 13
+    },
+    {
+      "token": "家送",
+      "start_offset": 11,
+      "end_offset": 13,
+      "type": "word",
+      "position": 14
+    },
+    {
+      "token": "但是",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 17
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 0,
+      "end_offset": 3,
+      "type": "word",
+      "position": 19
+    },
+    {
+      "token": "交待",
+      "start_offset": 4,
+      "end_offset": 6,
+      "type": "word",
+      "position": 21
+    },
+    {
+      "token": "不能",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 23
+    },
+    {
+      "token": "收堅苦",
+      "start_offset": 2,
+      "end_offset": 5,
+      "type": "word",
+      "position": 24
+    },
+    {
+      "token": "人",
+      "start_offset": 5,
+      "end_offset": 6,
+      "type": "word",
+      "position": 25
+    },
+    {
+      "token": "錢",
+      "start_offset": 7,
+      "end_offset": 8,
+      "type": "word",
+      "position": 27
+    },
+    {
+      "token": "所以",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 29
+    },
+    {
+      "token": "退",
+      "start_offset": 3,
+      "end_offset": 4,
+      "type": "word",
+      "position": 31
+    },
+    {
+      "token": "如果",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 34
+    },
+    {
+      "token": "會",
+      "start_offset": 5,
+      "end_offset": 6,
+      "type": "word",
+      "position": 38
+    },
+    {
+      "token": "退",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "word",
+      "position": 39
+    },
+    {
+      "token": "還是",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 42
+    },
+    {
+      "token": "希望",
+      "start_offset": 2,
+      "end_offset": 4,
+      "type": "word",
+      "position": 43
+    },
+    {
+      "token": "堅苦",
+      "start_offset": 4,
+      "end_offset": 6,
+      "type": "word",
+      "position": 44
+    },
+    {
+      "token": "人",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "word",
+      "position": 45
+    },
+    {
+      "token": "錢",
+      "start_offset": 8,
+      "end_offset": 9,
+      "type": "word",
+      "position": 47
+    },
+    {
+      "token": "都",
+      "start_offset": 9,
+      "end_offset": 10,
+      "type": "word",
+      "position": 48
+    },
+    {
+      "token": "娘家",
+      "start_offset": 11,
+      "end_offset": 13,
+      "type": "word",
+      "position": 49
+    },
+    {
+      "token": "回娘家",
+      "start_offset": 10,
+      "end_offset": 13,
+      "type": "word",
+      "position": 50
+    },
+    {
+      "token": "謝謝",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 54
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 2,
+      "end_offset": 5,
+      "type": "word",
+      "position": 55
+    },
+    {
+      "token": "你的",
+      "start_offset": 0,
+      "end_offset": 2,
+      "type": "word",
+      "position": 57
+    },
+    {
+      "token": "清清",
+      "start_offset": 2,
+      "end_offset": 4,
+      "type": "word",
+      "position": 58
+    },
+    {
+      "token": "清白",
+      "start_offset": 3,
+      "end_offset": 5,
+      "type": "word",
+      "position": 59
+    },
+    {
+      "token": "白白",
+      "start_offset": 4,
+      "end_offset": 6,
+      "type": "word",
+      "position": 60
+    },
+    {
+      "token": "清清白白",
+      "start_offset": 2,
+      "end_offset": 6,
+      "type": "word",
+      "position": 61
+    },
+    {
+      "token": "為",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "word",
+      "position": 63
+    },
+    {
+      "token": "選民著",
+      "start_offset": 1,
+      "end_offset": 4,
+      "type": "word",
+      "position": 64
+    },
+    {
+      "token": "想",
+      "start_offset": 4,
+      "end_offset": 5,
+      "type": "word",
+      "position": 65
+    },
+    {
+      "token": "心",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "word",
+      "position": 67
+    },
+    {
+      "token": "讓",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "word",
+      "position": 69
+    },
+    {
+      "token": "每個",
+      "start_offset": 1,
+      "end_offset": 3,
+      "type": "word",
+      "position": 70
+    },
+    {
+      "token": "選民",
+      "start_offset": 5,
+      "end_offset": 7,
+      "type": "word",
+      "position": 73
+    },
+    {
+      "token": "感到",
+      "start_offset": 7,
+      "end_offset": 9,
+      "type": "word",
+      "position": 74
+    },
+    {
+      "token": "驕傲",
+      "start_offset": 9,
+      "end_offset": 11,
+      "type": "word",
+      "position": 75
+    },
+    {
+      "token": "https",
+      "start_offset": 0,
+      "end_offset": 5,
+      "type": "word",
+      "position": 77
+    },
+    {
+      "token": "www",
+      "start_offset": 8,
+      "end_offset": 11,
+      "type": "word",
+      "position": 81
+    },
+    {
+      "token": "facebook",
+      "start_offset": 12,
+      "end_offset": 20,
+      "type": "word",
+      "position": 83
+    },
+    {
+      "token": "com",
+      "start_offset": 21,
+      "end_offset": 24,
+      "type": "word",
+      "position": 85
+    },
+    {
+      "token": "sanchingchen",
+      "start_offset": 25,
+      "end_offset": 37,
+      "type": "word",
+      "position": 87
+    },
+    {
+      "token": "posts",
+      "start_offset": 38,
+      "end_offset": 43,
+      "type": "word",
+      "position": 89
+    },
+    {
+      "token": "1016094781762836",
+      "start_offset": 44,
+      "end_offset": 60,
+      "type": "word",
+      "position": 91
+    }
+  ]
+}

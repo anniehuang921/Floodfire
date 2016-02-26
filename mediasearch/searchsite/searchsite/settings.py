@@ -37,7 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'elasticsearch1'
+    'elasticsearch1',
+    'testapp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,12 +104,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, '..', 'media'))
-#STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '..','static'))
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'collect_static'))
 #
 # PROJECT_DIR = os.path.dirname(__file__)
 #
-# STATICFILES_DIRS = (
+STATICFILES_DIRS = (
+      os.path.join(BASE_DIR, 'static'),
+    #("js", os.path.join(BASE_DIR, 'static', 'es_app')),
 #     ("js", os.path.join(STATIC_ROOT,'js')),
 #     ("css", os.path.join(STATIC_ROOT,'css')),
 #     ("images", os.path.join(STATIC_ROOT,'images')),
-# )
+)
+print(BASE_DIR)
+print(STATICFILES_DIRS)

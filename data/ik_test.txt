@@ -1,0 +1,1385 @@
+127.0.0.1:9200/test/_analyze?analyzer=ik&text=親民黨總統 副總統參選人 宋楚瑜 徐欣瑩2016元旦參加台北市升旗典禮2016.01.01
+{
+  "tokens": [
+    {
+      "token": "親",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "CN_CHAR",
+      "position": 0
+    },
+    {
+      "token": "民",
+      "start_offset": 1,
+      "end_offset": 2,
+      "type": "CN_CHAR",
+      "position": 1
+    },
+    {
+      "token": "黨",
+      "start_offset": 2,
+      "end_offset": 3,
+      "type": "CN_CHAR",
+      "position": 2
+    },
+    {
+      "token": "總",
+      "start_offset": 3,
+      "end_offset": 4,
+      "type": "CN_CHAR",
+      "position": 3
+    },
+    {
+      "token": "統",
+      "start_offset": 4,
+      "end_offset": 5,
+      "type": "CN_CHAR",
+      "position": 4
+    },
+    {
+      "token": "副",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "CN_WORD",
+      "position": 5
+    },
+    {
+      "token": "總",
+      "start_offset": 7,
+      "end_offset": 8,
+      "type": "CN_CHAR",
+      "position": 6
+    },
+    {
+      "token": "統",
+      "start_offset": 8,
+      "end_offset": 9,
+      "type": "CN_CHAR",
+      "position": 7
+    },
+    {
+      "token": "參",
+      "start_offset": 9,
+      "end_offset": 10,
+      "type": "CN_CHAR",
+      "position": 8
+    },
+    {
+      "token": "選",
+      "start_offset": 10,
+      "end_offset": 11,
+      "type": "CN_CHAR",
+      "position": 9
+    },
+    {
+      "token": "人",
+      "start_offset": 11,
+      "end_offset": 12,
+      "type": "CN_CHAR",
+      "position": 10
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 13,
+      "end_offset": 16,
+      "type": "CN_WORD",
+      "position": 11
+    },
+    {
+      "token": "宋",
+      "start_offset": 13,
+      "end_offset": 14,
+      "type": "CN_WORD",
+      "position": 12
+    },
+    {
+      "token": "楚",
+      "start_offset": 14,
+      "end_offset": 15,
+      "type": "CN_CHAR",
+      "position": 13
+    },
+    {
+      "token": "瑜",
+      "start_offset": 15,
+      "end_offset": 16,
+      "type": "CN_WORD",
+      "position": 14
+    },
+    {
+      "token": "徐",
+      "start_offset": 17,
+      "end_offset": 18,
+      "type": "CN_WORD",
+      "position": 15
+    },
+    {
+      "token": "欣",
+      "start_offset": 18,
+      "end_offset": 19,
+      "type": "CN_CHAR",
+      "position": 16
+    },
+    {
+      "token": "瑩",
+      "start_offset": 19,
+      "end_offset": 20,
+      "type": "CN_CHAR",
+      "position": 17
+    },
+    {
+      "token": "2016",
+      "start_offset": 20,
+      "end_offset": 24,
+      "type": "ARABIC",
+      "position": 18
+    },
+    {
+      "token": "元旦",
+      "start_offset": 24,
+      "end_offset": 26,
+      "type": "CN_WORD",
+      "position": 19
+    },
+    {
+      "token": "元",
+      "start_offset": 24,
+      "end_offset": 25,
+      "type": "COUNT",
+      "position": 20
+    },
+    {
+      "token": "旦",
+      "start_offset": 25,
+      "end_offset": 26,
+      "type": "CN_WORD",
+      "position": 21
+    },
+    {
+      "token": "參",
+      "start_offset": 26,
+      "end_offset": 27,
+      "type": "CN_CHAR",
+      "position": 22
+    },
+    {
+      "token": "加",
+      "start_offset": 27,
+      "end_offset": 28,
+      "type": "CN_CHAR",
+      "position": 23
+    },
+    {
+      "token": "台北市",
+      "start_offset": 28,
+      "end_offset": 31,
+      "type": "CN_WORD",
+      "position": 24
+    },
+    {
+      "token": "台北",
+      "start_offset": 28,
+      "end_offset": 30,
+      "type": "CN_WORD",
+      "position": 25
+    },
+    {
+      "token": "台",
+      "start_offset": 28,
+      "end_offset": 29,
+      "type": "CN_WORD",
+      "position": 26
+    },
+    {
+      "token": "北市",
+      "start_offset": 29,
+      "end_offset": 31,
+      "type": "CN_WORD",
+      "position": 27
+    },
+    {
+      "token": "市升",
+      "start_offset": 30,
+      "end_offset": 32,
+      "type": "CN_WORD",
+      "position": 28
+    },
+    {
+      "token": "升旗",
+      "start_offset": 31,
+      "end_offset": 33,
+      "type": "CN_WORD",
+      "position": 29
+    },
+    {
+      "token": "典",
+      "start_offset": 33,
+      "end_offset": 34,
+      "type": "CN_WORD",
+      "position": 30
+    },
+    {
+      "token": "禮",
+      "start_offset": 34,
+      "end_offset": 35,
+      "type": "CN_CHAR",
+      "position": 31
+    },
+    {
+      "token": "2016.01.01",
+      "start_offset": 35,
+      "end_offset": 45,
+      "type": "ARABIC",
+      "position": 32
+    }
+  ]
+}
+
+
+127.0.0.1:9200/test/_analyze?analyzer=ik&text=其實太陽花學運不是民進黨的 帶頭衝 而是其他小黨先去衝 民進黨才在後面跟著…不過無論這場學運的好壞 我只能說民進黨過去為民發聲的衝勁真的沒有像過去那麼強烈 這就是偏綠年輕人後來決定投宋的主要原因
+{
+  "tokens": [
+    {
+      "token": "其",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "CN_CHAR",
+      "position": 0
+    },
+    {
+      "token": "實",
+      "start_offset": 1,
+      "end_offset": 2,
+      "type": "CN_CHAR",
+      "position": 1
+    },
+    {
+      "token": "太",
+      "start_offset": 2,
+      "end_offset": 3,
+      "type": "CN_CHAR",
+      "position": 2
+    },
+    {
+      "token": "陽",
+      "start_offset": 3,
+      "end_offset": 4,
+      "type": "CN_CHAR",
+      "position": 3
+    },
+    {
+      "token": "花",
+      "start_offset": 4,
+      "end_offset": 5,
+      "type": "CN_CHAR",
+      "position": 4
+    },
+    {
+      "token": "學",
+      "start_offset": 5,
+      "end_offset": 6,
+      "type": "CN_CHAR",
+      "position": 5
+    },
+    {
+      "token": "運",
+      "start_offset": 6,
+      "end_offset": 7,
+      "type": "CN_CHAR",
+      "position": 6
+    },
+    {
+      "token": "不是",
+      "start_offset": 7,
+      "end_offset": 9,
+      "type": "CN_WORD",
+      "position": 7
+    },
+    {
+      "token": "民",
+      "start_offset": 9,
+      "end_offset": 10,
+      "type": "CN_CHAR",
+      "position": 8
+    },
+    {
+      "token": "進",
+      "start_offset": 10,
+      "end_offset": 11,
+      "type": "CN_CHAR",
+      "position": 9
+    },
+    {
+      "token": "黨",
+      "start_offset": 11,
+      "end_offset": 12,
+      "type": "CN_CHAR",
+      "position": 10
+    },
+    {
+      "token": "帶",
+      "start_offset": 14,
+      "end_offset": 15,
+      "type": "CN_CHAR",
+      "position": 11
+    },
+    {
+      "token": "頭",
+      "start_offset": 15,
+      "end_offset": 16,
+      "type": "CN_CHAR",
+      "position": 12
+    },
+    {
+      "token": "衝",
+      "start_offset": 16,
+      "end_offset": 17,
+      "type": "CN_CHAR",
+      "position": 13
+    },
+    {
+      "token": "而是",
+      "start_offset": 18,
+      "end_offset": 20,
+      "type": "CN_WORD",
+      "position": 14
+    },
+    {
+      "token": "其他",
+      "start_offset": 20,
+      "end_offset": 22,
+      "type": "CN_WORD",
+      "position": 15
+    },
+    {
+      "token": "小",
+      "start_offset": 22,
+      "end_offset": 23,
+      "type": "CN_CHAR",
+      "position": 16
+    },
+    {
+      "token": "黨",
+      "start_offset": 23,
+      "end_offset": 24,
+      "type": "CN_CHAR",
+      "position": 17
+    },
+    {
+      "token": "先去",
+      "start_offset": 24,
+      "end_offset": 26,
+      "type": "CN_WORD",
+      "position": 18
+    },
+    {
+      "token": "衝",
+      "start_offset": 26,
+      "end_offset": 27,
+      "type": "CN_CHAR",
+      "position": 19
+    },
+    {
+      "token": "民",
+      "start_offset": 28,
+      "end_offset": 29,
+      "type": "CN_CHAR",
+      "position": 20
+    },
+    {
+      "token": "進",
+      "start_offset": 29,
+      "end_offset": 30,
+      "type": "CN_CHAR",
+      "position": 21
+    },
+    {
+      "token": "黨",
+      "start_offset": 30,
+      "end_offset": 31,
+      "type": "CN_CHAR",
+      "position": 22
+    },
+    {
+      "token": "才",
+      "start_offset": 31,
+      "end_offset": 32,
+      "type": "CN_CHAR",
+      "position": 23
+    },
+    {
+      "token": "後",
+      "start_offset": 33,
+      "end_offset": 34,
+      "type": "CN_CHAR",
+      "position": 24
+    },
+    {
+      "token": "面",
+      "start_offset": 34,
+      "end_offset": 35,
+      "type": "CN_WORD",
+      "position": 25
+    },
+    {
+      "token": "跟",
+      "start_offset": 35,
+      "end_offset": 36,
+      "type": "CN_CHAR",
+      "position": 26
+    },
+    {
+      "token": "著",
+      "start_offset": 36,
+      "end_offset": 37,
+      "type": "CN_CHAR",
+      "position": 27
+    },
+    {
+      "token": "不",
+      "start_offset": 38,
+      "end_offset": 39,
+      "type": "CN_CHAR",
+      "position": 28
+    },
+    {
+      "token": "過",
+      "start_offset": 39,
+      "end_offset": 40,
+      "type": "CN_CHAR",
+      "position": 29
+    },
+    {
+      "token": "無",
+      "start_offset": 40,
+      "end_offset": 41,
+      "type": "CN_CHAR",
+      "position": 30
+    },
+    {
+      "token": "論",
+      "start_offset": 41,
+      "end_offset": 42,
+      "type": "CN_CHAR",
+      "position": 31
+    },
+    {
+      "token": "這",
+      "start_offset": 42,
+      "end_offset": 43,
+      "type": "CN_CHAR",
+      "position": 32
+    },
+    {
+      "token": "場",
+      "start_offset": 43,
+      "end_offset": 44,
+      "type": "CN_CHAR",
+      "position": 33
+    },
+    {
+      "token": "學",
+      "start_offset": 44,
+      "end_offset": 45,
+      "type": "CN_CHAR",
+      "position": 34
+    },
+    {
+      "token": "運",
+      "start_offset": 45,
+      "end_offset": 46,
+      "type": "CN_CHAR",
+      "position": 35
+    },
+    {
+      "token": "好",
+      "start_offset": 47,
+      "end_offset": 48,
+      "type": "CN_CHAR",
+      "position": 36
+    },
+    {
+      "token": "壞",
+      "start_offset": 48,
+      "end_offset": 49,
+      "type": "CN_CHAR",
+      "position": 37
+    },
+    {
+      "token": "我",
+      "start_offset": 50,
+      "end_offset": 51,
+      "type": "CN_CHAR",
+      "position": 38
+    },
+    {
+      "token": "只能",
+      "start_offset": 51,
+      "end_offset": 53,
+      "type": "CN_WORD",
+      "position": 39
+    },
+    {
+      "token": "說",
+      "start_offset": 53,
+      "end_offset": 54,
+      "type": "CN_CHAR",
+      "position": 40
+    },
+    {
+      "token": "民",
+      "start_offset": 54,
+      "end_offset": 55,
+      "type": "CN_CHAR",
+      "position": 41
+    },
+    {
+      "token": "進",
+      "start_offset": 55,
+      "end_offset": 56,
+      "type": "CN_CHAR",
+      "position": 42
+    },
+    {
+      "token": "黨",
+      "start_offset": 56,
+      "end_offset": 57,
+      "type": "CN_CHAR",
+      "position": 43
+    },
+    {
+      "token": "過",
+      "start_offset": 57,
+      "end_offset": 58,
+      "type": "CN_CHAR",
+      "position": 44
+    },
+    {
+      "token": "去",
+      "start_offset": 58,
+      "end_offset": 59,
+      "type": "CN_CHAR",
+      "position": 45
+    },
+    {
+      "token": "為",
+      "start_offset": 59,
+      "end_offset": 60,
+      "type": "CN_CHAR",
+      "position": 46
+    },
+    {
+      "token": "民",
+      "start_offset": 60,
+      "end_offset": 61,
+      "type": "CN_CHAR",
+      "position": 47
+    },
+    {
+      "token": "發",
+      "start_offset": 61,
+      "end_offset": 62,
+      "type": "CN_CHAR",
+      "position": 48
+    },
+    {
+      "token": "聲",
+      "start_offset": 62,
+      "end_offset": 63,
+      "type": "CN_CHAR",
+      "position": 49
+    },
+    {
+      "token": "衝",
+      "start_offset": 64,
+      "end_offset": 65,
+      "type": "CN_CHAR",
+      "position": 50
+    },
+    {
+      "token": "勁",
+      "start_offset": 65,
+      "end_offset": 66,
+      "type": "CN_CHAR",
+      "position": 51
+    },
+    {
+      "token": "真的",
+      "start_offset": 66,
+      "end_offset": 68,
+      "type": "CN_WORD",
+      "position": 52
+    },
+    {
+      "token": "沒",
+      "start_offset": 68,
+      "end_offset": 69,
+      "type": "CN_CHAR",
+      "position": 53
+    },
+    {
+      "token": "有",
+      "start_offset": 69,
+      "end_offset": 70,
+      "type": "CN_CHAR",
+      "position": 54
+    },
+    {
+      "token": "像",
+      "start_offset": 70,
+      "end_offset": 71,
+      "type": "CN_CHAR",
+      "position": 55
+    },
+    {
+      "token": "過",
+      "start_offset": 71,
+      "end_offset": 72,
+      "type": "CN_CHAR",
+      "position": 56
+    },
+    {
+      "token": "去",
+      "start_offset": 72,
+      "end_offset": 73,
+      "type": "CN_CHAR",
+      "position": 57
+    },
+    {
+      "token": "那",
+      "start_offset": 73,
+      "end_offset": 74,
+      "type": "CN_CHAR",
+      "position": 58
+    },
+    {
+      "token": "麼",
+      "start_offset": 74,
+      "end_offset": 75,
+      "type": "CN_CHAR",
+      "position": 59
+    },
+    {
+      "token": "強",
+      "start_offset": 75,
+      "end_offset": 76,
+      "type": "CN_CHAR",
+      "position": 60
+    },
+    {
+      "token": "烈",
+      "start_offset": 76,
+      "end_offset": 77,
+      "type": "CN_WORD",
+      "position": 61
+    },
+    {
+      "token": "這",
+      "start_offset": 78,
+      "end_offset": 79,
+      "type": "CN_CHAR",
+      "position": 62
+    },
+    {
+      "token": "就是",
+      "start_offset": 79,
+      "end_offset": 81,
+      "type": "CN_WORD",
+      "position": 63
+    },
+    {
+      "token": "偏",
+      "start_offset": 81,
+      "end_offset": 82,
+      "type": "CN_WORD",
+      "position": 64
+    },
+    {
+      "token": "綠",
+      "start_offset": 82,
+      "end_offset": 83,
+      "type": "CN_CHAR",
+      "position": 65
+    },
+    {
+      "token": "年",
+      "start_offset": 83,
+      "end_offset": 84,
+      "type": "CN_CHAR",
+      "position": 66
+    },
+    {
+      "token": "輕",
+      "start_offset": 84,
+      "end_offset": 85,
+      "type": "CN_CHAR",
+      "position": 67
+    },
+    {
+      "token": "人",
+      "start_offset": 85,
+      "end_offset": 86,
+      "type": "CN_CHAR",
+      "position": 68
+    },
+    {
+      "token": "後",
+      "start_offset": 86,
+      "end_offset": 87,
+      "type": "CN_CHAR",
+      "position": 69
+    },
+    {
+      "token": "來",
+      "start_offset": 87,
+      "end_offset": 88,
+      "type": "CN_CHAR",
+      "position": 70
+    },
+    {
+      "token": "決",
+      "start_offset": 88,
+      "end_offset": 89,
+      "type": "CN_CHAR",
+      "position": 71
+    },
+    {
+      "token": "定",
+      "start_offset": 89,
+      "end_offset": 90,
+      "type": "CN_CHAR",
+      "position": 72
+    },
+    {
+      "token": "投",
+      "start_offset": 90,
+      "end_offset": 91,
+      "type": "CN_CHAR",
+      "position": 73
+    },
+    {
+      "token": "宋",
+      "start_offset": 91,
+      "end_offset": 92,
+      "type": "CN_WORD",
+      "position": 74
+    },
+    {
+      "token": "主要原因",
+      "start_offset": 93,
+      "end_offset": 97,
+      "type": "CN_WORD",
+      "position": 75
+    },
+    {
+      "token": "主要",
+      "start_offset": 93,
+      "end_offset": 95,
+      "type": "CN_WORD",
+      "position": 76
+    },
+    {
+      "token": "原因",
+      "start_offset": 95,
+      "end_offset": 97,
+      "type": "CN_WORD",
+      "position": 77
+    }
+  ]
+}
+
+
+
+127.0.0.1:9200/test/_analyze?analyzer=ik&text=民進黨的人看看吧！你們家的小豬又往宋楚瑜家送了！但是，宋楚瑜有交待，不能收堅苦人的錢?所以就退了！如果是你們會退嗎？還是希望堅苦人的錢都回娘家？？？謝謝宋楚瑜，你的清清白白，為選民著想的心，讓每個你的選民感到驕傲?https://www.facebook.com/SanChingchen/posts/1016094781762836
+{
+  "tokens": [
+    {
+      "token": "民",
+      "start_offset": 0,
+      "end_offset": 1,
+      "type": "CN_CHAR",
+      "position": 0
+    },
+    {
+      "token": "進",
+      "start_offset": 1,
+      "end_offset": 2,
+      "type": "CN_CHAR",
+      "position": 1
+    },
+    {
+      "token": "黨",
+      "start_offset": 2,
+      "end_offset": 3,
+      "type": "CN_CHAR",
+      "position": 2
+    },
+    {
+      "token": "的人",
+      "start_offset": 3,
+      "end_offset": 5,
+      "type": "CN_WORD",
+      "position": 3
+    },
+    {
+      "token": "看看",
+      "start_offset": 5,
+      "end_offset": 7,
+      "type": "CN_WORD",
+      "position": 4
+    },
+    {
+      "token": "看吧",
+      "start_offset": 6,
+      "end_offset": 8,
+      "type": "CN_WORD",
+      "position": 5
+    },
+    {
+      "token": "你",
+      "start_offset": 9,
+      "end_offset": 10,
+      "type": "CN_CHAR",
+      "position": 6
+    },
+    {
+      "token": "們",
+      "start_offset": 10,
+      "end_offset": 11,
+      "type": "CN_CHAR",
+      "position": 7
+    },
+    {
+      "token": "家",
+      "start_offset": 11,
+      "end_offset": 12,
+      "type": "CN_WORD",
+      "position": 8
+    },
+    {
+      "token": "小",
+      "start_offset": 13,
+      "end_offset": 14,
+      "type": "CN_CHAR",
+      "position": 9
+    },
+    {
+      "token": "豬",
+      "start_offset": 14,
+      "end_offset": 15,
+      "type": "CN_CHAR",
+      "position": 10
+    },
+    {
+      "token": "往",
+      "start_offset": 16,
+      "end_offset": 17,
+      "type": "CN_CHAR",
+      "position": 11
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 17,
+      "end_offset": 20,
+      "type": "CN_WORD",
+      "position": 12
+    },
+    {
+      "token": "宋",
+      "start_offset": 17,
+      "end_offset": 18,
+      "type": "CN_WORD",
+      "position": 13
+    },
+    {
+      "token": "楚",
+      "start_offset": 18,
+      "end_offset": 19,
+      "type": "CN_CHAR",
+      "position": 14
+    },
+    {
+      "token": "瑜",
+      "start_offset": 19,
+      "end_offset": 20,
+      "type": "CN_WORD",
+      "position": 15
+    },
+    {
+      "token": "家",
+      "start_offset": 20,
+      "end_offset": 21,
+      "type": "CN_WORD",
+      "position": 16
+    },
+    {
+      "token": "送了",
+      "start_offset": 21,
+      "end_offset": 23,
+      "type": "CN_WORD",
+      "position": 17
+    },
+    {
+      "token": "但是",
+      "start_offset": 24,
+      "end_offset": 26,
+      "type": "CN_WORD",
+      "position": 18
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 27,
+      "end_offset": 30,
+      "type": "CN_WORD",
+      "position": 19
+    },
+    {
+      "token": "宋",
+      "start_offset": 27,
+      "end_offset": 28,
+      "type": "CN_WORD",
+      "position": 20
+    },
+    {
+      "token": "楚",
+      "start_offset": 28,
+      "end_offset": 29,
+      "type": "CN_CHAR",
+      "position": 21
+    },
+    {
+      "token": "瑜",
+      "start_offset": 29,
+      "end_offset": 30,
+      "type": "CN_WORD",
+      "position": 22
+    },
+    {
+      "token": "有",
+      "start_offset": 30,
+      "end_offset": 31,
+      "type": "CN_CHAR",
+      "position": 23
+    },
+    {
+      "token": "交待",
+      "start_offset": 31,
+      "end_offset": 33,
+      "type": "CN_WORD",
+      "position": 24
+    },
+    {
+      "token": "不能",
+      "start_offset": 34,
+      "end_offset": 36,
+      "type": "CN_WORD",
+      "position": 25
+    },
+    {
+      "token": "收",
+      "start_offset": 36,
+      "end_offset": 37,
+      "type": "CN_CHAR",
+      "position": 26
+    },
+    {
+      "token": "堅",
+      "start_offset": 37,
+      "end_offset": 38,
+      "type": "CN_CHAR",
+      "position": 27
+    },
+    {
+      "token": "苦人",
+      "start_offset": 38,
+      "end_offset": 40,
+      "type": "CN_WORD",
+      "position": 28
+    },
+    {
+      "token": "錢",
+      "start_offset": 41,
+      "end_offset": 42,
+      "type": "CN_CHAR",
+      "position": 29
+    },
+    {
+      "token": "所以",
+      "start_offset": 43,
+      "end_offset": 45,
+      "type": "CN_WORD",
+      "position": 30
+    },
+    {
+      "token": "退了",
+      "start_offset": 46,
+      "end_offset": 48,
+      "type": "CN_WORD",
+      "position": 31
+    },
+    {
+      "token": "退",
+      "start_offset": 46,
+      "end_offset": 47,
+      "type": "CN_WORD",
+      "position": 32
+    },
+    {
+      "token": "如果是",
+      "start_offset": 49,
+      "end_offset": 52,
+      "type": "CN_WORD",
+      "position": 33
+    },
+    {
+      "token": "如果",
+      "start_offset": 49,
+      "end_offset": 51,
+      "type": "CN_WORD",
+      "position": 34
+    },
+    {
+      "token": "你",
+      "start_offset": 52,
+      "end_offset": 53,
+      "type": "CN_CHAR",
+      "position": 35
+    },
+    {
+      "token": "們",
+      "start_offset": 53,
+      "end_offset": 54,
+      "type": "CN_CHAR",
+      "position": 36
+    },
+    {
+      "token": "會",
+      "start_offset": 54,
+      "end_offset": 55,
+      "type": "CN_CHAR",
+      "position": 37
+    },
+    {
+      "token": "退",
+      "start_offset": 55,
+      "end_offset": 56,
+      "type": "CN_WORD",
+      "position": 38
+    },
+    {
+      "token": "嗎",
+      "start_offset": 56,
+      "end_offset": 57,
+      "type": "CN_CHAR",
+      "position": 39
+    },
+    {
+      "token": "還",
+      "start_offset": 58,
+      "end_offset": 59,
+      "type": "CN_CHAR",
+      "position": 40
+    },
+    {
+      "token": "希望",
+      "start_offset": 60,
+      "end_offset": 62,
+      "type": "CN_WORD",
+      "position": 41
+    },
+    {
+      "token": "堅",
+      "start_offset": 62,
+      "end_offset": 63,
+      "type": "CN_CHAR",
+      "position": 42
+    },
+    {
+      "token": "苦人",
+      "start_offset": 63,
+      "end_offset": 65,
+      "type": "CN_WORD",
+      "position": 43
+    },
+    {
+      "token": "錢",
+      "start_offset": 66,
+      "end_offset": 67,
+      "type": "CN_CHAR",
+      "position": 44
+    },
+    {
+      "token": "都回",
+      "start_offset": 67,
+      "end_offset": 69,
+      "type": "CN_WORD",
+      "position": 45
+    },
+    {
+      "token": "回娘家",
+      "start_offset": 68,
+      "end_offset": 71,
+      "type": "CN_WORD",
+      "position": 46
+    },
+    {
+      "token": "回",
+      "start_offset": 68,
+      "end_offset": 69,
+      "type": "CN_WORD",
+      "position": 47
+    },
+    {
+      "token": "娘家",
+      "start_offset": 69,
+      "end_offset": 71,
+      "type": "CN_WORD",
+      "position": 48
+    },
+    {
+      "token": "家",
+      "start_offset": 70,
+      "end_offset": 71,
+      "type": "CN_WORD",
+      "position": 49
+    },
+    {
+      "token": "謝",
+      "start_offset": 74,
+      "end_offset": 75,
+      "type": "CN_CHAR",
+      "position": 50
+    },
+    {
+      "token": "謝",
+      "start_offset": 75,
+      "end_offset": 76,
+      "type": "CN_CHAR",
+      "position": 51
+    },
+    {
+      "token": "宋楚瑜",
+      "start_offset": 76,
+      "end_offset": 79,
+      "type": "CN_WORD",
+      "position": 52
+    },
+    {
+      "token": "宋",
+      "start_offset": 76,
+      "end_offset": 77,
+      "type": "CN_WORD",
+      "position": 53
+    },
+    {
+      "token": "楚",
+      "start_offset": 77,
+      "end_offset": 78,
+      "type": "CN_CHAR",
+      "position": 54
+    },
+    {
+      "token": "瑜",
+      "start_offset": 78,
+      "end_offset": 79,
+      "type": "CN_WORD",
+      "position": 55
+    },
+    {
+      "token": "你",
+      "start_offset": 80,
+      "end_offset": 81,
+      "type": "CN_CHAR",
+      "position": 56
+    },
+    {
+      "token": "清清白白",
+      "start_offset": 82,
+      "end_offset": 86,
+      "type": "CN_WORD",
+      "position": 57
+    },
+    {
+      "token": "清清",
+      "start_offset": 82,
+      "end_offset": 84,
+      "type": "CN_WORD",
+      "position": 58
+    },
+    {
+      "token": "清白",
+      "start_offset": 83,
+      "end_offset": 85,
+      "type": "CN_WORD",
+      "position": 59
+    },
+    {
+      "token": "白白",
+      "start_offset": 84,
+      "end_offset": 86,
+      "type": "CN_WORD",
+      "position": 60
+    },
+    {
+      "token": "為",
+      "start_offset": 87,
+      "end_offset": 88,
+      "type": "CN_CHAR",
+      "position": 61
+    },
+    {
+      "token": "選",
+      "start_offset": 88,
+      "end_offset": 89,
+      "type": "CN_CHAR",
+      "position": 62
+    },
+    {
+      "token": "民",
+      "start_offset": 89,
+      "end_offset": 90,
+      "type": "CN_CHAR",
+      "position": 63
+    },
+    {
+      "token": "著",
+      "start_offset": 90,
+      "end_offset": 91,
+      "type": "CN_CHAR",
+      "position": 64
+    },
+    {
+      "token": "想",
+      "start_offset": 91,
+      "end_offset": 92,
+      "type": "CN_CHAR",
+      "position": 65
+    },
+    {
+      "token": "心",
+      "start_offset": 93,
+      "end_offset": 94,
+      "type": "CN_CHAR",
+      "position": 66
+    },
+    {
+      "token": "讓",
+      "start_offset": 95,
+      "end_offset": 96,
+      "type": "CN_CHAR",
+      "position": 67
+    },
+    {
+      "token": "每",
+      "start_offset": 96,
+      "end_offset": 97,
+      "type": "CN_CHAR",
+      "position": 68
+    },
+    {
+      "token": "個",
+      "start_offset": 97,
+      "end_offset": 98,
+      "type": "CN_CHAR",
+      "position": 69
+    },
+    {
+      "token": "你",
+      "start_offset": 98,
+      "end_offset": 99,
+      "type": "CN_CHAR",
+      "position": 70
+    },
+    {
+      "token": "選",
+      "start_offset": 100,
+      "end_offset": 101,
+      "type": "CN_CHAR",
+      "position": 71
+    },
+    {
+      "token": "民",
+      "start_offset": 101,
+      "end_offset": 102,
+      "type": "CN_CHAR",
+      "position": 72
+    },
+    {
+      "token": "感到",
+      "start_offset": 102,
+      "end_offset": 104,
+      "type": "CN_WORD",
+      "position": 73
+    },
+    {
+      "token": "驕",
+      "start_offset": 104,
+      "end_offset": 105,
+      "type": "CN_CHAR",
+      "position": 74
+    },
+    {
+      "token": "傲",
+      "start_offset": 105,
+      "end_offset": 106,
+      "type": "CN_CHAR",
+      "position": 75
+    },
+    {
+      "token": "https",
+      "start_offset": 107,
+      "end_offset": 112,
+      "type": "ENGLISH",
+      "position": 76
+    },
+    {
+      "token": "www.facebook.com",
+      "start_offset": 115,
+      "end_offset": 131,
+      "type": "LETTER",
+      "position": 77
+    },
+    {
+      "token": "www",
+      "start_offset": 115,
+      "end_offset": 118,
+      "type": "ENGLISH",
+      "position": 78
+    },
+    {
+      "token": "facebook",
+      "start_offset": 119,
+      "end_offset": 127,
+      "type": "ENGLISH",
+      "position": 79
+    },
+    {
+      "token": "com",
+      "start_offset": 128,
+      "end_offset": 131,
+      "type": "ENGLISH",
+      "position": 80
+    },
+    {
+      "token": "sanchingchen",
+      "start_offset": 132,
+      "end_offset": 144,
+      "type": "ENGLISH",
+      "position": 81
+    },
+    {
+      "token": "posts",
+      "start_offset": 145,
+      "end_offset": 150,
+      "type": "ENGLISH",
+      "position": 82
+    },
+    {
+      "token": "1016094781762836",
+      "start_offset": 151,
+      "end_offset": 167,
+      "type": "ARABIC",
+      "position": 83
+    }
+  ]
+}
