@@ -30,9 +30,47 @@
 <div class="container">
       <h1>查詢結果</h1>
       <h3>查詢文字 : {{one}}</h3>
-      <h2>查詢顯示文章標題 ： {{result}}</h2>
-      內容 : {{content}}
-      <br>
+      <table>
+        <tr>
+          <th>'media_name',
+          <th>'from_user_name',
+          <th>'from_user_nick',
+          <th>'title',
+          <th>'content',
+          <th>'time',
+          <th>'platform'
+        </tr>
+        <tr>
+          <th>{{media_name}}
+          <th>{{from_user_name}}
+          <th>{{from_user_nick}}
+          <th>{{title}}
+          <th>{{content}}
+          <th>{{time}}
+          <th>{{platform}}
+        </tr>
+
+
+
+
+        <!-- <tr>
+        <td> {{all}} -->
+
+
+          <!-- {% for key, i in event  %} -->
+          <!-- <td>{{event.media_name}} -->
+          <!-- <td>i['_source']['from_user_name']
+          <td>i['_source']['from_user_nick']
+          <td>i['_source']['from_user_nick']
+          <td>i['_source']['title']
+          <td>i['_source']['content']
+          <td>i['_source']['time']
+          <td>i['_source']['platform'] -->
+          <!-- {% endfor %} -->
+        <!-- </tr> -->
+
+      </table>
+
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         結果輸出
@@ -41,7 +79,7 @@
   <a
     <input class="btn btn-lg btn-primary btn-block"  type="button" onClick="window.location.href='{% url 'index' %}'" value="Add item"/>
     返回查詢介面
-  </a>
+  </a> 
 
 </div>
 </body>

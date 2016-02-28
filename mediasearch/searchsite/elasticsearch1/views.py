@@ -28,8 +28,15 @@ def ui_first(request):
         if len(result['hits']['hits'])>0:
             results = {
                 "one":one,
-                "result":result['hits']['hits'][0]['_source']['title'],
-                "content":result['hits']['hits'][0]['_source']['content'],
+                # "result":result['hits']['hits'],#[0]['_source']['title'],
+                # "content":result['hits']['hits'][0]['_source']['content'],
+                'media_name':result['hits']['hits'][0]['_source']['media_name'],
+                'from_user_name':result['hits']['hits'][0]['_source']['from_user_name'],
+                'from_user_nick':result['hits']['hits'][0]['_source']['from_user_nick'],
+                'title':result['hits']['hits'][0]['_source']['title'],
+                'content':result['hits']['hits'][0]['_source']['content'],
+                'time':result['hits']['hits'][0]['_source']['time'],
+                'platform':result['hits']['hits'][0]['_source']['platform'],
             }
         else:
             results = {
