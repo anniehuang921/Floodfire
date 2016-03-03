@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
 from django.shortcuts import render_to_response
+from django.template.defaulttags import register
 
 from elasticsearch import Elasticsearch
 from elasticsearch.client import IndicesClient
@@ -16,7 +17,12 @@ def result(request):
     else:
         return render(request,'result.html')
 
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
+
 def ui_first(request):
+
     if request.GET.get('first','')!="" :
         one = request.GET.get('first','')
         # two = request.GET.get('second','')
@@ -28,15 +34,24 @@ def ui_first(request):
         if len(result['hits']['hits'])>0:
             results = {
                 "one":one,
-                # "result":result['hits']['hits'],#[0]['_source']['title'],
+                "events":result['hits']['hits'],
+                "field":['platform','media_name','title','from_user_name','from_user_nick', 'content', 'time'],
+                "name":{'media_name':"版名",
+                        'from_user_name':"發文者名稱",
+                        'from_user_nick':"發文者暱稱",
+                        'title': "標題",
+                        'content':"內容",
+                        'time': "發文時間",
+                        'platform':"媒體來源"},
+                "result":result['hits']['hits'][0]['_source'].keys(),
                 # "content":result['hits']['hits'][0]['_source']['content'],
-                'media_name':result['hits']['hits'][0]['_source']['media_name'],
-                'from_user_name':result['hits']['hits'][0]['_source']['from_user_name'],
-                'from_user_nick':result['hits']['hits'][0]['_source']['from_user_nick'],
-                'title':result['hits']['hits'][0]['_source']['title'],
-                'content':result['hits']['hits'][0]['_source']['content'],
-                'time':result['hits']['hits'][0]['_source']['time'],
-                'platform':result['hits']['hits'][0]['_source']['platform'],
+                # 'media_name':result['hits']['hits'][0]['_source']['media_name'],
+                # 'from_user_name':result['hits']['hits'][0]['_source']['from_user_name'],
+                # 'from_user_nick':result['hits']['hits'][0]['_source']['from_user_nick'],
+                # 'title':result['hits']['hits'][0]['_source']['title'],
+                # 'content':result['hits']['hits'][0]['_source']['content'],
+                # 'time':result['hits']['hits'][0]['_source']['time'],
+                # 'platform':result['hits']['hits'][0]['_source']['platform'],
             }
         else:
             results = {
