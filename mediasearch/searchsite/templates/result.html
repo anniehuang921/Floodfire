@@ -40,27 +40,12 @@
           {% endfor %}
         </tr>
 
-        <!-- <tr>
-          <th>{{media_name}}
-          <th>{{from_user_name}}
-          <th>{{from_user_nick}}
-          <th>{{title}}
-          <th>{{content}}
-          <th>{{time}}
-          <th>{{platform}}
-        </tr> -->
 {% for i in events %}
         <tr>
           {% with i|get_item:"_source" as t %}
           {% for val in field%}
           {% if val in result %}
             <th>{{t|get_item:val}}
-            <!-- <th>{{t|get_item:"from_user_name"}}
-            <th>{{t|get_item:"from_user_nick"}}
-            <th>{{t|get_item:"title"}}
-            <th>{{t|get_item:"content"}}
-            <th>{{t|get_item:"time"}}
-            <th>{{t|get_item:"platform"}} -->
           {% endif %}
           {% endfor %}
           {% endwith %}
