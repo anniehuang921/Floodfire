@@ -19,14 +19,21 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from elasticsearch1.views import ui_first, result
+from elasticsearch1.views import ui_first, result, query_list
 from testapp.views import testapp
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',ui_first, name='index'),
     url(r'^testapp/$',testapp),
     url(r'^result/$',result),
+
+    # url(r'^(?P<filename>(robots.txt)|(humans.txt))$',
+        # home_files, name='home-files'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'i18n/', include('django.conf.urls.i18n')),
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 print (settings.STATIC_URL)
 print (settings.STATIC_ROOT)

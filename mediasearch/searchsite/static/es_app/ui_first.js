@@ -17,3 +17,26 @@ $(document).ready($(function () {
             $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
         });
     }));
+
+$(function() {
+
+        //
+        // $('#instructorSelector').on('change', function() {
+        //     $('#btn').show();
+        // });
+        $('.instructorSelector').hide();
+
+        $('#btn').on('click', function() {
+            $('.instructorSelector').show();
+            return false;
+        //     $('#instructorSelector').css('display', 'none');
+        // }, function(){
+        //   $('#instructorSelector').css('display', 'block');
+        });
+
+        // $('#btn').on('click', function() {
+        //     var select_value = $('#instructorSelector').val();
+
+            // use the value here
+
+    });

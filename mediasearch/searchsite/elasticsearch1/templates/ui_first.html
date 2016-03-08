@@ -21,7 +21,9 @@
 <script src="{% static 'es_app/bootstrap-datetimepicker.js' %}" type="text/javascript"></script>
 <meta charset="UTF-8">
 <style>
-
+.control-label{
+  text-align:right;
+}
 </style>
 <title>Flood-Fire Media Sources Search Engine</title>
 </head>
@@ -30,85 +32,85 @@
 <div class="container">
       <h2 class="form-signin-heading">Media Sources Search Engine 媒體來源資料檢索</h2>
       <br>
-      <form class="form-horizontal">
+      <form class="form-horizontal" action="" method="post"> {% csrf_token %}
       <div class="form-group">
         <label class="col-sm-4 control-label">with all of the words</label>
         <div class="col-sm-8">
-          <input class="form-control" name="first" placeholder="with all of the words（全文）" autofocus>
+          <input class="form-control" name="allq" placeholder="with all of the words（全文）" autofocus>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label">with the exact phrase</label>
         <div class="col-sm-8">
-          <input  class="form-control" placeholder="with the exact phrase（特定字元）" >
+          <input  class="form-control" name="exact" placeholder="with the exact phrase（特定字元）" >
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label">with at least one of the words</label>
         <div class="col-sm-8">
-          <input class="form-control" placeholder="with at least one of the words（出現下列任一字元）"  autofocus>
+          <input class="form-control" name="least" placeholder="with at least one of the words（出現下列任一字元）"  autofocus>
         </div>
       </div>
 
       <div class="form-group">
         <label class="col-sm-4 control-label">without the words</label>
         <div class="col-sm-8">
-          <input class="form-control" placeholder="without the words（不出現下列字詞）"  autofocus>
+          <input class="form-control" name="notq" placeholder="without the words（不出現下列字詞）"  autofocus>
         </div>
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label class="col-sm-4 control-label">where my words occur</label>
         <div class="col-sm-8">
-          <input class="form-control" placeholder="where my words occur(版名) source(page/板/media)[media_name]" autofocus>
+          <input class="form-control" name="source" placeholder="where my words occur(版名) source(page/板/media)[media_name]" autofocus>
         </div>
-      </div>
+      </div> -->
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label class="col-sm-4 control-label">Return articles authored by</label>
         <div class="col-sm-8">
-          <input class="form-control" placeholder="user(發文者)[from_user_name]" autofocus>
+          <input class="form-control" name="author" placeholder="user(發文者)[from_user_name]" autofocus>
         </div>
-      </div>
+      </div> -->
 
-      <div class="form-group">
+      <!-- <div class="form-group" >
           <label style="font-weight:bold;" class="col-sm-4 checkbox-inline control-label">where my words occur（指定出現欄位）
-            <!-- <h5 class="form-signin-heading">Platform 媒體來源</h5> -->
-          </label>
+            <! <h5 class="form-signin-heading">Platform 媒體來源</h5> -->
+          <!-- </label> -->
           <!-- <label class="checkbox-inline textContainer">
             <input type="checkbox" class="check1" value="option1"> source(page/板/media)[media_name]
           </label>
           <label class="checkbox-inline">
             <input type="checkbox" class="check1" value="option2"> user(發文者)[from_user_name]
           </label> -->
-          <label class="checkbox-inline check">
-            <input type="checkbox" class="check1" value="option3"> title(標題)
+          <!-- <label class="checkbox-inline check">
+            <input type="checkbox" class="check1" name="occur" value="title"> title(標題)
           </label>
           <label class="checkbox-inline ">
-            <input type="checkbox" class="check1" value="option4"> content(內容)[content]
+            <input type="checkbox" class="check1" name="occur" value="content"> content(內容)[content]
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" class="check1" id="checkAll1" value="optionall"> event(事件)
+            <input type="checkbox" class="check1" name="occur" id="checkAll1" value="event"> event(事件)
           </label>
-      </div>
+      </div> -->
 
-      <div class="form-group">
+      <div class="form-group instructorSelector" >
           <label style="font-weight:bold;" class="col-sm-4 checkbox-inline control-label">Platform 媒體來源
             <!-- <h5 class="form-signin-heading">Platform 媒體來源</h5> -->
           </label>
           <label class="checkbox-inline textContainer">
-            <input type="checkbox" class="check" value="option1"> Twitter
+            <input type="checkbox" class="check" name="media" value="twitter"> Twitter
           </label>
           <label class="checkbox-inline">
-            <input type="checkbox" class="check" value="option2"> Facebook
+            <input type="checkbox" class="check" name="media"  value="facebook"> Facebook
           </label>
           <label class="checkbox-inline check">
-            <input type="checkbox" class="check" value="option3"> News
+            <input type="checkbox" class="check" name="media" value="mews"> News
           </label>
           <label class="checkbox-inline ">
-            <input type="checkbox" class="check" value="option4"> PTT
+            <input type="checkbox" class="check" name="media" value="ptt"> PTT
           </label>
           <label class="checkbox-inline">
             <input type="checkbox" class="check" id="checkAll" value="optionall"> all 全部 (預設)
@@ -116,26 +118,32 @@
       </div>
 
 
-      <div class="form-group">
-      <div class="dropdown col-sm-2 col-md-offset-1">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      <div class="form-inline instructorSelector" style="overflow:auto;margin-left:19.2%;">
+        <label class="control-label col-sm-2 "> Sorted by </label>
+      <div class=" col-sm-2" >
+        <!-- <button class="btn btn-default dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           Sorted By 排序依照
           <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+        </button> -->
+        <select class="form-control instructorSelector" name="sort">
+          <option>相關性(預設)</option>
+          <!-- <option>熱門度</option> -->
+          <option>時間</option>
+        </select>
+        <!-- <ul class="dropdown-menu dropdown-menu-right" name="sort" aria-labelledby="dropdownMenu1">
           <li><a href="#">相關性(預設)</a></li>
           <li><a href="#">熱門度</a></li>
           <li><a href="#">時間</a></li>
           <li role="separator" class="divider"></li>
-        </ul>
-      </div>
+        </ul> -->
+    </div>
 
-      <label style="font-weight:bold;" class="col-sm-2 checkbox-inline control-label">Time interval
+      <label style="font-weight:bold;" class="instructorSelector col-sm-2 checkbox-inline control-label">Time interval
       </label>
         <div class='col-md-3'>
             <div class="form-group">
                 <div class='input-group date' id='datetimepicker6'>
-                    <input type='text' class="form-control" />
+                    <input type='text' class="form-control" name="date1"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -145,7 +153,7 @@
         <div class='col-md-3'>
             <div class="form-group">
                 <div class='input-group date' id='datetimepicker7'>
-                    <input type='text' class="form-control" />
+                    <input type='text' class="form-control" name="date2"/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -162,9 +170,18 @@
       </div>
     </div>
 
+    <button class="btn btn-lg btn-primary btn-block" id="btn">
+      進階條件查詢
+    </button>
+
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Search 搜尋
       </button>
+
+
+
+
+
   </form>
 </div>
 </body>

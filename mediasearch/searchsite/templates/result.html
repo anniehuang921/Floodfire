@@ -37,6 +37,9 @@
           {% if fieldname in result %}
           <td>{{name|get_item:fieldname}}
           {% endif %}
+
+{% empty %}
+<h2>所使用的查詢條件查不到喔</h2>
           {% endfor %}
         </tr>
 

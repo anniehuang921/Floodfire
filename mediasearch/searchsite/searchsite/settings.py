@@ -39,7 +39,26 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'elasticsearch1',
     'testapp',
+
 )
+
+INSTALLED_APPS += (
+    # The Django sites framework is required
+    'django.contrib.sites',
+    
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # Login via Google
+    'allauth.socialaccount.providers.google',
+)
+
+SITE_ID = 1
+
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = "none"
+SOCIALACCOUNT_QUERY_EMAIL = True
+LOGIN_REDIRECT_URL = "/"
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,6 +73,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'searchsite.urls'
 
+SESSION_COOKIE_AGE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -65,12 +87,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
+                # Required by allauth template tags
+                "django.core.context_processors.request",
             ],
         },
     },
 ]
 
+
+
+
 WSGI_APPLICATION = 'searchsite.wsgi.application'
+
 
 
 # Database
