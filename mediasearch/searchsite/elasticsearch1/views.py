@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 
 from django.shortcuts import render_to_response
 from django.template.defaulttags import register
+from django.template import RequestContext
 from elasticsearch1.models import Esquery
 
 from elasticsearch1.esclass import esf, esc
@@ -22,9 +23,9 @@ def result(request):
     else:
         return render_to_response('ui_first.html')
 #
-# @register.filter
-# def get_item(dictionary, key):
-#     return dictionary.get(key)
+@register.filter
+def get_item(dictionary, key):
+    return dictionary.get(key)
 #
 def ui_first(request):
     # if request.get:
@@ -34,31 +35,48 @@ def ui_first(request):
         exact = request.POST['exact']
         least = request.POST['least']
         notq = request.POST['notq']
-        source = request.POST['source']
-        author = request.POST['author']
-        occur = request.POST['occur']
-        media = request.POST['media']
+        # source1 = request.POST['source1']
+        # author = request.POST['author']
+        # occur = request.POST['occur']
+        # for i in range(4):
+            # exec("%s = %s" % (media+i,request.POST['media'+str(i)]))
+
+        # media = [request.POST["media0"],request.POST["media1"],request.POST["media2"],request.POST["media3"]]
+        media = request.POST.getlist('media')
         sort = request.POST['sort']
-        date1 = request.POST['date1']
-        date2 = request.POST['date2']
-        print (allq)
+        if sort == "時間":
+            sort = True
+        else:
+            sort = False
+
+        # date1 = request.POST['date1']
+        # date2 = request.POST['date2']
         Esquery.objects.create(
             allq = allq,
             exact = exact,
             least = least,
             notq = notq,
-            source = source,
-            author = author,
-            occur = occur,
+            # source1 = source1,
+            # author = author,
+            # occur = occur,
             media = media,
             sort = sort,
-            date1 = date1,
-            date2 = date2
+            # date1 = date1,
+            # date2 = date2
         )
 
-        return render_to_response('result.html',locals())
-    else:
-        return render_to_response('ui_first.html')
+        QU = esc(media ,
+            must_cond = exact,
+            mustnot_cond = notq,
+            should_cond = least,
+            time_sort = sort,
+            # date1 = date1, date2 = date2 )
+            date1 = None, date2 = None )
+        count = QU.count()
+        result = QU.result(3)
+        # search = QU.search()
+
+
 
 
 #     if request.GET.get('allq','')!="" :#or
@@ -82,39 +100,48 @@ def ui_first(request):
 #         # total= u"柯"
 #
 #
-#         if len(esc.result)>0:
-#             results = {
-#                 "one":one,
-#                 "events":QU.result(3),
-#                 "count":QU.count(),
-#                 "field":['platform','media_name','title','from_user_name','from_user_nick', 'content', 'time'],
-#                 "name":{'media_name':"版名",
-#                         'from_user_name':"發文者名稱",
-#                         'from_user_nick':"發文者暱稱",
-#                         'title': "標題",
-#                         'content':"內容",
-#                         'time': "發文時間",
-#                         'platform':"媒體來源"},
-#                 "result":result['hits']['hits'][0]['_source'].keys()}
-#                 # "content":result['hits']['hits'][0]['_source']['content'],
-#                 # 'media_name':result['hits']['hits'][0]['_source']['media_name'],
-#                 # 'from_user_name':result['hits']['hits'][0]['_source']['from_user_name'],
-#                 # 'from_user_nick':result['hits']['hits'][0]['_source']['from_user_nick'],
-#                 # 'title':result['hits']['hits'][0]['_source']['title'],
-#                 # 'content':result['hits']['hits'][0]['_source']['content'],
-#                 # 'time':result['hits']['hits'][0]['_source']['time'],
-#                 # 'platform':result['hits']['hits'][0]['_source']['platform'],
-#
-#         else:
-#                 results = {
-#                 "one":one,
-#                 "result":'無查詢結果',
-#                 "content":"",
-#             }
-#
-#         #return HttpResponse('Welcome!~'+ str(total))
-#         #return HttpResponse(result['hits']['hits'][0]['_source']['title'])
-#         return render(request,"result.html",results)
+        if len(result)>0:
+            results = {
+                # "one":one,
+                "one":"test",
+
+                "count":count,
+                "field":['platform','media_name','title','from_user_name','from_user_nick', 'content', 'time'],
+                "name":{'media_name':"版名",
+                        'from_user_name':"發文者名稱",
+                        'from_user_nick':"發文者暱稱",
+                        'title': "標題",
+                        'content':"內容",
+                        'time': "發文時間",
+                        'platform':"媒體來源"},
+                "events":result,
+
+                "result":result[0]['_source'].keys()}
+
+                # "content":result['hits']['hits'][0]['_source']['content'],
+                # 'media_name':result['hits']['hits'][0]['_source']['media_name'],
+                # 'from_user_name':result['hits']['hits'][0]['_source']['from_user_name'],
+                # 'from_user_nick':result['hits']['hits'][0]['_source']['from_user_nick'],
+                # 'title':result['hits']['hits'][0]['_source']['title'],
+                # 'content':result['hits']['hits'][0]['_source']['content'],
+                # 'time':result['hits']['hits'][0]['_source']['time'],
+                # 'platform':result['hits']['hits'][0]['_source']['platform'],
+
+        else:
+                results = {
+                "one":one,
+                "result":'無查詢結果',
+                "content":"",
+            }
+
+        #return HttpResponse('Welcome!~'+ str(total))
+        #return HttpResponse(result['hits']['hits'][0]['_source']['title'])
+        # return render(request,"result.html",results)
+        # return render_to_response('result.html',RequestContext(request,locals()))
+        return render_to_response('result.html',RequestContext(request,results))
+
+    else:
+        return render_to_response('ui_first.html',RequestContext(request))
 #     else:
 #         return render_to_response('ui_first.html')#,locals())
 #

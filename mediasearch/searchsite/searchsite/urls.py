@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
 from elasticsearch1.views import ui_first, result, query_list
 from testapp.views import testapp
 urlpatterns = [

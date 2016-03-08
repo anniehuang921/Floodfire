@@ -10,7 +10,7 @@ from elasticsearch.client import IndicesClient
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 es_index=IndicesClient(es)
 result= es.search(index="platform",doc_type="ptt",body={"size":3,"query":{"match":{u"content":u"柯"}}})
-print (result['hits']['hits'][0]['_source']['title'])
+
 # Create your views here.
 # def result(request):
 #     if request.GET:

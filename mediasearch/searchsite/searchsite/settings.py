@@ -45,7 +45,7 @@ INSTALLED_APPS = (
 INSTALLED_APPS += (
     # The Django sites framework is required
     'django.contrib.sites',
-    
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -144,5 +144,5 @@ STATICFILES_DIRS = (
 #     ("css", os.path.join(STATIC_ROOT,'css')),
 #     ("images", os.path.join(STATIC_ROOT,'images')),
 )
-print(BASE_DIR)
-print(STATICFILES_DIRS)
+# print(BASE_DIR)
+# print(STATICFILES_DIRS)
